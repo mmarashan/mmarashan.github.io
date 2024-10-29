@@ -16,7 +16,7 @@ export default function Home({ allPostsData }) {
         Yet another programmer's blog. Yet another programmer's blog.
         </p>
       </section>
-      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -29,7 +29,7 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
-      </section> */}
+      </section>
     </Layout>
   );
 }

@@ -1,0 +1,3 @@
+[submodule "blog.pages"]
+	path = blog.pages
+	url = https://github.com/mmarashan/blog.pages.git
