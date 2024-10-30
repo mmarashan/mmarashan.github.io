@@ -8,7 +8,7 @@ export default function ShowcaseItem({ id, date, title, poster }) {
     return <li className={utilStyles.listItem} key={id}>
         <div>
         <Image
-            class={styles.showcaseCardImage}
+            className={styles.showcaseCardImage}
             priority
             height={108}
             width={108}
