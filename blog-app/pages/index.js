@@ -1,22 +1,21 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import ShowcaseItem from '../components/showcaseItem';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
+import { strings } from '../public/const';
 
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{strings.siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>
-        Yet another programmer's blog. Yet another programmer's blog.
-        </p>
+      <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
+        <p>{strings.myDescription}</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>{strings.blogTitle}</h2>
         <ul className={utilStyles.list}>
           {
             allPostsData.map(({ id, date, title, poster }) => (

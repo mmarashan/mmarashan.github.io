@@ -25,6 +25,10 @@
   line-height: 1.5;
 }
 
+.textAlignCenter {
+  text-align: center;
+}
+
 .borderCircle {
   border-radius: 9999px;
 }
