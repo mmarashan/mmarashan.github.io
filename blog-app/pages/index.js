@@ -18,8 +18,8 @@ export default function Home({ allPostsData }) {
         <h2 className={utilStyles.headingLg}>{strings.blogTitle}</h2>
         <ul className={utilStyles.list}>
           {
-            allPostsData.map(({ id, date, title, poster }) => (
-              <ShowcaseItem id = {id} date = {date} title = {title} poster = {poster}/>
+            allPostsData.map(({ id, date, title, poster, tags }) => (
+              <ShowcaseItem id = {id} date = {date} title = {title} poster = {poster} tags = {tags}/>
             ))
           }
         </ul>
