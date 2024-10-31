@@ -4,11 +4,6 @@
   margin: 0rem auto 6rem;
 }
 
-.appBar {
-  width: fit-content;
-  padding-bottom: 8px;
-}
-
 .header {
   display: flex;
   flex-direction: column;

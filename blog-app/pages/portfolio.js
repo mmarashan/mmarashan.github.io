@@ -1,26 +1,27 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
+import ShowcaseItem from '../components/showcaseItem';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import { strings } from '../public/const';
 import Divider from '@mui/material/Divider';
 import Link from 'next/link';
-import Stack from '@mui/material/Stack';
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{strings.siteTitle}</title>
       </Head>
-      <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
-        <p>{strings.myDescription}</p>
-        <Divider aria-hidden="true" />
-        <p><Stack direction="row" spacing={4}>
-          <Link href='/portfolio'>👨🏻‍💻 Портфолио</Link>
-          <Link href='/blog'>📝 Блог</Link>
-        </Stack>
-        </p>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>{strings.portfolioTitle}</h2>
+        <ul className={utilStyles.list}>
+          {
+            allPostsData.map(({ id, date, title, poster, tags }) => (
+              <ShowcaseItem id = {id} date = {date} title = {title} poster = {poster} tags = {tags}/>
+            ))
+          }
+        </ul>
       </section>
     </Layout>
   );
