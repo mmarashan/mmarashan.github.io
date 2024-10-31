@@ -4,6 +4,8 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import { strings } from '../public/const';
+import ResponsiveAppBar from './appBar.js';
+import Spacer from './spacer.js';
 
 
 export default function Layout({ children, home }) {
@@ -13,7 +15,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Yet another programmer's blog."
+          content={strings.siteTitle}
         />
         <meta
           property="og:image"
@@ -24,6 +26,8 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={strings.siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <ResponsiveAppBar className={styles.appBar}/>
+      <Spacer axis="vertical" size={32} />
       <header className={styles.header}>
         {home ? (
           <>

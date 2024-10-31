@@ -4,6 +4,7 @@ import ShowcaseItem from '../components/showcaseItem';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import { strings } from '../public/const';
+import Divider from '@mui/material/Divider';
 
 export default function Home({ allPostsData }) {
   return (
@@ -14,6 +15,7 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
         <p>{strings.myDescription}</p>
       </section>
+      <Divider aria-hidden="true" />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>{strings.blogTitle}</h2>
         <ul className={utilStyles.list}>
