@@ -4,10 +4,8 @@ import ShowcaseItem from '../components/showcaseItem';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import { strings } from '../public/const';
-import Divider from '@mui/material/Divider';
-import Link from 'next/link';
 
-export default function Home({ allPostsData }) {
+export default function Portfolio({ allPostsData }) {
   return (
     <Layout>
       <Head>
@@ -28,7 +26,7 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData('portfolio');
   return {
     props: {
       allPostsData,
