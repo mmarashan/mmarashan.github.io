@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData } from '../lib/posts';
 import { strings } from '../public/const';
 import Divider from '@mui/material/Divider';
 import Link from 'next/link';
@@ -20,11 +19,4 @@ export default function Home() {
       </section>
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  getSortedPostsData('portfolio');
-  return {
-    props: {},
-  };
 }

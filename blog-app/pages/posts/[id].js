@@ -1,8 +1,8 @@
 import Layout from '../../components/layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
+import { PostsRepository } from '../../data/postsRepository'
 
 export default function Post({ postData }) {
   return (
@@ -22,7 +22,8 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  let postsRepository = new PostsRepository('../blog.pages/portfolio')
+  const paths = postsRepository.getAllPostIds();
   return {
     paths,
     fallback: false,
@@ -30,7 +31,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+  let postsRepository = new PostsRepository('../blog.pages/portfolio')
+  const postData = await postsRepository.getPostData(params.id);
   return {
     props: {
       postData,

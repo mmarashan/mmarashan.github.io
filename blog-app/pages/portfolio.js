@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import ShowcaseItem from '../components/showcaseItem';
 import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData } from '../lib/posts';
 import { strings } from '../public/const';
+import { PostsRepository } from '../data/postsRepository'
 
 export default function Portfolio({ allPostsData }) {
   return (
@@ -26,10 +26,11 @@ export default function Portfolio({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData('portfolio');
+  let postsRepository = new PostsRepository('../blog.pages/portfolio')
+  let allPostsData = postsRepository.getSortedPostsData();
   return {
     props: {
-      allPostsData,
+      allPostsData
     },
   };
 }
