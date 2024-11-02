@@ -15,7 +15,7 @@ export default function Home() {
         <p>{strings.myDescription}</p>
         <Divider aria-hidden="true" />
         <p><Link href='/portfolio'>👨🏻‍💻 Портфолио</Link></p>
-        <p><Link href='/blog'>📝 Блог</Link></p>
+        {/* <p><Link href='/blog'>📝 Блог</Link></p> */}
       </section>
     </Layout>
   );

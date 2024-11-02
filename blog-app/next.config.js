@@ -17,7 +17,6 @@ const nextConfig = {
     // Optional: Change the output directory `out` -> `dist`
     distDir: 'build',
 
-    webpack5: true,
     webpack: (config) => {
       config.resolve.fallback = { fs: false };
   
