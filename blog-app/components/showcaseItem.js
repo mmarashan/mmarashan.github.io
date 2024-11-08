@@ -7,12 +7,12 @@ import TagsChips from '../components/chips';
 
 export default function ShowcaseItem({ id, date, title, poster, tags }) {
     return <li className={utilStyles.listItem} key={id}>
-        <Image
+        <img
             className={styles.showcaseCardImage}
-            priority
-            height={108}
-            width={108}
-            src={poster}/>
+            src={poster}
+            alt={title}
+            loading="lazy"
+          />
         <Link href={`/posts/${id}`}>{title}</Link>
         <br/>
         <small className={utilStyles.lightText}>

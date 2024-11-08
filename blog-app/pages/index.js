@@ -14,8 +14,8 @@ export default function Home() {
       <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
         <p>{strings.myDescription}</p>
         <Divider aria-hidden="true" />
-        <p><Link href='/portfolio'>👨🏻‍💻 Портфолио</Link></p>
-        {/* <p><Link href='/blog'>📝 Блог</Link></p> */}
+        <p><Link href='/blog'>{strings.blogTitle}</Link></p>
+        <p><Link href='/portfolio'>{strings.portfolioTitle}</Link></p>
       </section>
     </Layout>
   );
