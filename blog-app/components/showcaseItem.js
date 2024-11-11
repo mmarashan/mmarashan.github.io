@@ -13,7 +13,7 @@ export default function ShowcaseItem({ id, date, title, poster, tags }) {
             alt={title}
             loading="lazy"
           />
-        <Link href={`/posts/${id}`}>{title}</Link>
+        <Link href={`/portfolio/${id}`}>{title}</Link>
         <br/>
         <small className={utilStyles.lightText}>
             <Date dateString={date} />

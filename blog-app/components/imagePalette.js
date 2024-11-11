@@ -3,6 +3,7 @@ import { useState } from "react";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import { useRouter } from 'next/navigation'
 
 
 export default function ImagePalette({items}) {
@@ -17,8 +18,9 @@ export default function ImagePalette({items}) {
 
 function ImageItem({item}) { 
     const [isHovering, setIsHovering] = useState(false);
+    const router = useRouter()
     return (
-      <ImageListItem key={item.img}>
+      <ImageListItem key={item.img} onClick={() => router.push(`/blog/${item.id}`)}>
       <img
         src={item.poster}
         alt={item.title}
