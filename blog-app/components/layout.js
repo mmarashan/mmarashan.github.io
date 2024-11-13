@@ -16,14 +16,6 @@ export default function Layout({ children, home }) {
           name="description"
           content={strings.siteTitle}
         />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            strings.siteTitle,
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={strings.siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Spacer axis="vertical" size={32} />
       <header className={styles.header}>
@@ -31,7 +23,7 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/profile.png"
+              src="/images/profile.webp"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
