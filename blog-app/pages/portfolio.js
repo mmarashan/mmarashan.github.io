@@ -7,7 +7,7 @@ import { PostsRepository } from '../data/postsRepository'
 
 export default function Portfolio({ allPostsData }) {
   return (
-    <Layout>
+    <Layout showHomeBottomNavigation>
       <Head>
         <title>{strings.siteTitle}</title>
       </Head>

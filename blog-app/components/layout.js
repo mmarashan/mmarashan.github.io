@@ -7,7 +7,7 @@ import { strings } from '../public/const';
 import Spacer from './spacer.js';
 
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, showHomeBottomNavigation }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,27 +18,8 @@ export default function Layout({ children, home }) {
         />
       </Head>
       <Spacer axis="vertical" size={32} />
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.webp"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={strings.myName}
-            />
-            <h1 className={utilStyles.heading2Xl}>{strings.myName}</h1>
-          </>
-        ) : (
-          <>
-
-          </>
-        )}
-      </header>
       <main>{children}</main>
-      {!home && (
+      { showHomeBottomNavigation && (
         <div className={styles.backToHome}>
           <Link href="/">{strings.backToHome}</Link>
         </div>

@@ -7,7 +7,7 @@ import ImagePalette from '../components/imagePalette';
 
 export default function Portfolio({ allPostsData }) {
   return (
-    <Layout>
+    <Layout showHomeBottomNavigation>
       <Head>
         <title>{strings.siteTitle}</title>
       </Head>

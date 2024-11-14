@@ -11,7 +11,7 @@ export default function Post({ postData }) {
   const router = useRouter();
   const url = router.url;
   return (
-    <Layout>
+    <Layout showHomeBottomNavigation>
       <Head>
         <title>{postData.title}</title>
         <OpenGraphMeta
