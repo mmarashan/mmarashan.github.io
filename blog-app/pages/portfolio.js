@@ -5,9 +5,9 @@ import utilStyles from '../styles/utils.module.css';
 import { strings } from '../public/const';
 import { PostsRepository } from '../data/postsRepository'
 
-export default function Portfolio({ allPostsData }) {
+export default function PortfolioShowcase({ allPostsData }) {
   return (
-    <Layout showHomeBottomNavigation>
+    <Layout showTitle>
       <Head>
         <title>{strings.siteTitle}</title>
       </Head>
@@ -16,7 +16,7 @@ export default function Portfolio({ allPostsData }) {
         <ul className={utilStyles.list}>
           {
             allPostsData.map(({ id, date, title, poster, tags }) => (
-              <ShowcaseItem id = {id} date = {date} title = {title} poster = {poster} tags = {tags}/>
+              <ShowcaseItem id = {id} date = {date} title = {title} poster = {poster} tags = {tags} link={`/portfolio/${id}`}/>
             ))
           }
         </ul>

@@ -1,11 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Date from '../components/date';
 import utilStyles from '../styles/utils.module.css';
 import styles from './layout.module.css';
 import TagsChips from '../components/chips';
 
-export default function ShowcaseItem({ id, date, title, poster, tags }) {
+export default function ShowcaseItem({ id, date, title, poster, tags, link }) {
     return <li className={utilStyles.listItem} key={id}>
         <img
             className={styles.showcaseCardImage}
@@ -13,7 +12,7 @@ export default function ShowcaseItem({ id, date, title, poster, tags }) {
             alt={title}
             loading="lazy"
           />
-        <Link href={`/portfolio/${id}`}>{title}</Link>
+        <Link href={link}>{title}</Link>
         <br/>
         <small className={utilStyles.lightText}>
             <Date dateString={date} />

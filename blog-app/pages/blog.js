@@ -3,17 +3,23 @@ import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { strings } from '../public/const';
 import { PostsRepository } from '../data/postsRepository'
-import ImagePalette from '../components/imagePalette';
+import ShowcaseItem from '../components/showcaseItem';
 
-export default function Portfolio({ allPostsData }) {
+export default function BlogShowcase({ allPostsData }) {
   return (
-    <Layout showHomeBottomNavigation>
+    <Layout showTitle>
       <Head>
         <title>{strings.siteTitle}</title>
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>{strings.blogTitle}</h2>
-        <ImagePalette items = {allPostsData}/>
+        <ul className={utilStyles.list}>
+          {
+            allPostsData.map(({ id, date, title, poster, tags }) => (
+              <ShowcaseItem id = {id} date = {date} title = {title} poster = {poster} tags = {tags} link={`/blog/${id}`}/>
+            ))
+          }
+        </ul>
       </section>
     </Layout>
   );

@@ -6,5 +6,8 @@ export const strings = {
     myDescription: "👨🏻‍💻 Инженер-разработчик с продуктовым мышлением 💡 с опытом разработки fintech-приложений 🧰, голосовых ассистентов 🤖, корпоративного софта в legal 🛡️, funtech-приложений. 🎬",
     blogTitle: '📝 Блог',
     portfolioTitle: '👨🏻‍💻 Портфолио',
-    backToHome: '🏠 На главную'
+    backToHome: '🏠 На главную',
+    emailTitle: '📩 ',
+    myEmail: 'marashanmv@yandex.ru',
+    emailLink: 'mailto:marashanmv@yandex.ru'
 }
