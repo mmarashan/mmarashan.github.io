@@ -24,3 +24,26 @@
 .showcaseCardTags {
   padding: 10px;
 }
+
+.horizontalContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button {
+  height: 40px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  border-radius: 5px; 
+  overflow: hidden; 
+  cursor: pointer;
+}
+
+.buttonIcon {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}

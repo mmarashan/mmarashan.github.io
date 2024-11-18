@@ -8,6 +8,7 @@ import Divider from '@mui/material/Divider';
 import Link from 'next/link';
 import Image from 'next/image';
 import Spacer from '../components/spacer.js';
+import ContactsStage from '../components/contactsStage.js'
 
 export default function Home() {
   return (
@@ -34,9 +35,11 @@ export default function Home() {
         />
         <h1 className={utilStyles.heading2Xl}>{strings.myName}</h1>
       </header>
-      <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
-        <p><Link href={strings.emailLink}>{strings.emailTitle} {strings.myEmail}</Link></p>
-        <p>{strings.myDescription}</p>
+      <section>
+        <p className={`${utilStyles.myDescription} ${utilStyles.textAlignCenter}`}>
+          {strings.myDescription}
+        </p>
+        <ContactsStage email={strings.myEmail} githubUrl={strings.githubUrl}/> 
       </section>
       <Divider aria-hidden="true" />
       <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
