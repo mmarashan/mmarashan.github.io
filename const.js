@@ -1,6 +1,6 @@
 
 export const strings = {
-    siteUrl: 'http://marashan.ru',
+    siteHost: 'marashan.ru',
     siteTitle: '🚀 Yet another programmer\'s blog',
     myName: 'Максим Марашан',
     myDescription: "Инженер-разработчик с опытом разработки fintech-приложений 🧰, голосовых ассистентов 🤖, корпоративного софта в legal 🛡️, funtech-приложений 🎬",
@@ -9,5 +9,6 @@ export const strings = {
     backToHome: '🏠 На главную',
     emailTitle: '📩 ',
     myEmail: 'marashanmv@yandex.ru',
-    githubUrl: 'https://github.com/mmarashan'
+    githubUrl: 'https://github.com/mmarashan',
+    habrUrl: 'https://habr.com/ru/users/mmarashan/publications/articles'
 }
