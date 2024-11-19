@@ -18,7 +18,7 @@ export default function Home() {
         <OpenGraphMeta
           title={strings.siteTitle}
           description={strings.siteTitle}
-          url={strings.siteUrl}
+          url={strings.siteHost}
           image="/images/profile.webp"
           siteName={strings.siteTitle}
         />
@@ -39,7 +39,7 @@ export default function Home() {
         <p className={`${utilStyles.myDescription} ${utilStyles.textAlignCenter}`}>
           {strings.myDescription}
         </p>
-        <ContactsStage email={strings.myEmail} githubUrl={strings.githubUrl}/> 
+        <ContactsStage email={strings.myEmail} githubUrl={strings.githubUrl} habrUrl={strings.habrUrl}/> 
       </section>
       <Divider aria-hidden="true" />
       <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
