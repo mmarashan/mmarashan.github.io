@@ -12,3 +12,9 @@ export const strings = {
     githubUrl: 'https://github.com/mmarashan',
     habrUrl: 'https://habr.com/ru/users/mmarashan/publications/articles'
 }
+
+export const resources = {
+    metricaId: 98989423,
+    githubUrl: 'https://github.com/mmarashan',
+    habrUrl: 'https://habr.com/ru/users/mmarashan/publications/articles'
+}

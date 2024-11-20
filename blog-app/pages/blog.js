@@ -16,7 +16,7 @@ export default function BlogShowcase({ allPostsData }) {
         <ul className={utilStyles.list}>
           {
             allPostsData.map(({ id, date, title, poster, tags }) => (
-              <ShowcaseItem id = {id} date = {date} title = {title} poster = {poster} tags = {tags} link={`/blog/${id}`}/>
+              <ShowcaseItem key = {id} id = {id} date = {date} title = {title} poster = {poster} tags = {tags} link={`/blog/${id}`}/>
             ))
           }
         </ul>
