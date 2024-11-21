@@ -15,7 +15,6 @@ export default function Layout({ children, showTitle }) {
           name="description"
           content={strings.siteTitle}
         />
-        
       </Head>
       <h1 className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
         {showTitle && <Link href='/' className={utilStyles.siteTitle}>{strings.siteTitle}</Link>}

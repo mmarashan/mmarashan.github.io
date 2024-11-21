@@ -9,6 +9,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Spacer from '../components/spacer.js';
 import ContactsStage from '../components/contactsStage.js'
+import { MyContacts } from '../public/const';
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
         <p className={`${utilStyles.myDescription} ${utilStyles.textAlignCenter}`}>
           {strings.myDescription}
         </p>
-        <ContactsStage email={strings.myEmail} githubUrl={strings.githubUrl} habrUrl={strings.habrUrl}/> 
+        <ContactsStage contacts={MyContacts}/> 
       </section>
       <Divider aria-hidden="true" />
       <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>

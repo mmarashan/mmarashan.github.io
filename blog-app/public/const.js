@@ -7,14 +7,31 @@ export const strings = {
     blogTitle: '📝 Блог',
     portfolioTitle: '👨🏻‍💻 Портфолио',
     backToHome: '🏠 На главную',
-    emailTitle: '📩 ',
-    myEmail: 'marashanmv@yandex.ru',
-    githubUrl: 'https://github.com/mmarashan',
-    habrUrl: 'https://habr.com/ru/users/mmarashan/publications/articles'
 }
 
 export const resources = {
     metricaId: 98989423,
-    githubUrl: 'https://github.com/mmarashan',
-    habrUrl: 'https://habr.com/ru/users/mmarashan/publications/articles'
 }
+
+export const MyContacts = [
+    {
+        title: "E-mail",
+        icon: "/images/yandex_mail_icon.svg",
+        url: "mailto:marashanmv@yandex.ru"
+    },
+    {
+        title: "Github",
+        icon: "/images/github-mark.svg",
+        url: 'https://github.com/mmarashan'
+    },
+    {
+        title: "Хабр",
+        icon: "/images/habr_icon.png",
+        url: 'https://habr.com/ru/users/mmarashan/publications/articles'
+    },
+    {
+        title: "Хабр Карьера",
+        icon: "/images/habr_carrer.jpg",
+        url: 'https://career.habr.com/mmarashan'
+    }
+]

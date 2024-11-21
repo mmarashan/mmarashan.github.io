@@ -5,7 +5,7 @@ import styles from './layout.module.css';
 import TagsChips from '../components/chips';
 
 export default function ShowcaseItem({ id, date, title, poster, tags, link }) {
-    return <li className={utilStyles.listItem} key={id}>
+    return <div className={utilStyles.horizontalContainer} key={id}>
         <img
             className={styles.showcaseCardImage}
             src={poster}
@@ -20,5 +20,5 @@ export default function ShowcaseItem({ id, date, title, poster, tags, link }) {
         <div className={styles.showcaseCardTags}>
             <TagsChips tags={tags}/>
         </div>
-  </li>
+  </div>
 }
