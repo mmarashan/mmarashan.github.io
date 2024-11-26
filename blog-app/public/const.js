@@ -33,5 +33,10 @@ export const MyContacts = [
         title: "Хабр Карьера",
         icon: "/images/habr_carrer.jpg",
         url: 'https://career.habr.com/mmarashan'
+    },
+    {
+        title: "LinkedIn",
+        icon: "/images/linkedin-icon.svg",
+        url: 'https://www.linkedin.com/in/marashan/'
     }
 ]
