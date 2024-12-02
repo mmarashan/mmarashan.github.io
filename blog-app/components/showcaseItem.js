@@ -8,6 +8,7 @@ export default function ShowcaseItem({ id, date, title, poster, tags, link }) {
     return <div className={utilStyles.horizontalContainer} key={id}>
         <img
             className={styles.showcaseCardImage}
+            width={256} 
             src={poster}
             alt={title}
             loading="lazy"
