@@ -3,7 +3,7 @@ export const strings = {
     siteHost: 'marashan.ru',
     siteTitle: '🚀 Yet another programmer\'s blog',
     myName: 'Максим Марашан',
-    myDescription: "Инженер-разработчик с опытом разработки fintech-приложений 🧰, голосовых ассистентов 🤖, корпоративного софта в legal 🛡️, funtech-приложений 🎬",
+    myDescription: "Программист с опытом работы 9 лет. Запускал продукты в fintech 🧰, voice assistant 🤖, computer vision 🧿, legal 🛡️, funtech 🎬",
     blogTitle: '📝 Блог',
     portfolioTitle: '👨🏻‍💻 Портфолио',
     backToHome: '🏠 На главную',
@@ -33,5 +33,10 @@ export const MyContacts = [
         title: "Хабр Карьера",
         icon: "/images/habr_carrer.jpg",
         url: 'https://career.habr.com/mmarashan'
+    },
+    {
+        title: "LinkedIn",
+        icon: "/images/linkedin-icon.svg",
+        url: 'https://www.linkedin.com/in/marashan/'
     }
 ]
