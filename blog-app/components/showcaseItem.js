@@ -5,21 +5,21 @@ import styles from './layout.module.css';
 import TagsChips from '../components/chips';
 
 export default function ShowcaseItem({ id, date, title, poster, tags, link }) {
-    return <div className={utilStyles.horizontalContainer} key={id}>
+    return <div className={styles.showcaseCard} key={id}>
         <img
             className={styles.showcaseCardImage}
-            width={256} 
             src={poster}
             alt={title}
             loading="lazy"
           />
-        <Link href={link}>{title}</Link>
-        <br/>
-        <small className={utilStyles.lightText}>
-            <Date dateString={date} />
-        </small>
-        <div className={styles.showcaseCardTags}>
-            <TagsChips tags={tags}/>
+        <div className={styles.showcaseCardData}>
+            <Link href={link}>{title}</Link>
+            <br/>
+            <Date className={utilStyles.lightText} dateString={date} />
+            <br/>
+            <div className={styles.showcaseCardTags}>
+                <TagsChips className={styles.showcaseCardTags} tags={tags}/>
+            </div>
         </div>
   </div>
 }

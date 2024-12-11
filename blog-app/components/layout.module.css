@@ -14,14 +14,8 @@
   margin: 3rem 0 0;
 }
 
-.showcaseCardImage {
-  float: left;
-  height: auto;
-  padding: 0px 16px 0px 0px;
-}
-
 .showcaseCardTags {
-  padding: 10px;
+  padding: 8px 0 0 0 ;
 }
 
 .horizontalContainer{
@@ -29,6 +23,47 @@
   justify-content: center;
   flex-direction: row;
   align-items: center;
+}
+
+.showcaseCard{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.showcaseCardImage {
+  width: 256px;
+  height: auto;
+  max-height: 196px;
+  object-fit: cover;
+}
+
+.showcaseCardData {
+  padding: 10px;
+}
+
+/* Изменение стилей под мобильную верстку */
+@media (max-width: 768px) {
+  .showcaseCard {
+    flex-direction: column;
+  }
+  
+  .showcaseCardImage {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  .showcaseCardData {
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .showcaseCardTags {
+    display: none;
+  }
 }
 
 .button {

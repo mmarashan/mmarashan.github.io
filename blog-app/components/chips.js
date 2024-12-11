@@ -7,7 +7,7 @@ export default function TagsChips({tags}) {
     <Stack direction="row" spacing={1}>
       {
         tags.map((tag) => (
-          <Chip key={tag} label={tag} size="small" color="primary"/>
+          <Chip key={tag} label={tag} size="small" variant="outlined"/>
         ))
       }
     </Stack>

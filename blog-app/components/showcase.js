@@ -15,8 +15,8 @@ export default function PostsShowcase({ title, posts, postLinkPrefix }) {
         <ul className={utilStyles.list}>
           {
             posts.map(({ id, date, title, poster, tags }) => (
-              <li className={utilStyles.listItem}>
-              <ShowcaseItem key = {id} id = {id} date = {date} title = {title} poster = {poster} tags = {tags} link={`/${postLinkPrefix}/${id}`}/>
+              <li className={utilStyles.listItem} key = {id}>
+                <ShowcaseItem id = {id} date = {date} title = {title} poster = {poster} tags = {tags} link={`/${postLinkPrefix}/${id}`}/>
               </li>
             ))
           }
