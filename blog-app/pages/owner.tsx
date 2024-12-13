@@ -1,51 +1,51 @@
 import Head from 'next/head';
-import Layout from '../components/layout';
-import OpenGraphMeta from '../components/openGraphMeta'
+import Layout from '../components/layout.js';
+import OpenGraphMeta from '../components/openGraphMeta.js'
 import utilStyles from '../styles/utils.module.css';
 import styles from '../components/layout.module.css';
-import { strings } from '../public/const';
+import { Strings, MyContacts, OwnerInfo } from '../public/Const';
 import Divider from '@mui/material/Divider';
 import Link from 'next/link';
 import Image from 'next/image';
 import Spacer from '../components/spacer.js';
 import ContactsStage from '../components/contactsStage.js'
-import { MyContacts } from '../public/const';
 
-export default function Home() {
+export default function MyPage() {
   return (
-    <Layout>
+    <Layout showTitle={false} showFooter={false}>
       <Head>
-        <title>{strings.siteTitle}</title>
+        <title>{OwnerInfo.nameWithSurname}</title>
         <OpenGraphMeta
-          title={strings.siteTitle}
-          description={strings.siteTitle}
-          url={strings.siteHost}
-          image="/images/profile.webp"
-          siteName={strings.siteTitle}
+          title={Strings.siteTitle}
+          description={Strings.siteDescription}
+          url={Strings.siteHost}
+          image={OwnerInfo.photoPath}
+          siteName={Strings.siteTitle}
         />
       </Head>
       <Spacer axis="vertical" size={32} />
       <header className={styles.header}>
         <Image
           priority
-          src="/images/profile.webp"
+          src={OwnerInfo.photoPath}
           className={utilStyles.borderCircle}
           height={144}
           width={144}
-          alt={strings.myName}
+          alt={OwnerInfo.nameWithSurname}
         />
-        <h1 className={utilStyles.heading2Xl}>{strings.myName}</h1>
+        <h1 className={utilStyles.heading2Xl}>{OwnerInfo.nameWithSurname}</h1>
       </header>
       <section>
         <p className={`${utilStyles.myDescription} ${utilStyles.textAlignCenter}`}>
-          {strings.myDescription}
+          {OwnerInfo.about}
         </p>
         <ContactsStage contacts={MyContacts}/> 
       </section>
+      <Spacer axis="vertical" size={16} />
       <Divider aria-hidden="true" />
       <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
-        <p><Link href='/blog'>{strings.blogTitle}</Link></p>
-        <p><Link href='/portfolio'>{strings.portfolioTitle}</Link></p>
+        <p><Link href='/'>{Strings.blogTitle}</Link></p>
+        <p><Link href='/owner/portfolio'>{Strings.portfolioTitle}</Link></p>
       </section>
     </Layout>
   );

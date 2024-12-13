@@ -6,7 +6,9 @@ import html from 'remark-html';
 
 export class PostsRepository {
 
-    constructor (postsDirectory) {
+    private postsDirectory: string
+
+    constructor(postsDirectory: string) {
         this.postsDirectory = postsDirectory
     }
 
@@ -24,11 +26,15 @@ export class PostsRepository {
       
           // Use gray-matter to parse the post metadata section
           const matterResult = matter(fileContents);
-      
+          const data: { [key: string]: any } = matterResult.data
           // Combine the data with the id
           return {
-            id,
-            ...matterResult.data,
+            id: id,
+            date: data['date'],
+            title: data['title'],
+            poster: data['poster'],
+            tags: data['tags'],
+            link: ""
           };
         });
         // Sort posts by date

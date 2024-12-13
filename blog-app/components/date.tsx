@@ -1,7 +1,12 @@
 import { parseISO, format } from 'date-fns';
 import utilStyles from '../styles/utils.module.css';
+import React, { FC } from 'react';
 
-export default function Date({ dateString }) {
+interface DateProps {
+  dateString: string;
+}
+
+const Date: FC<DateProps> = ({ dateString }) => {
   try {
     const date = parseISO(dateString);
     return <time className={utilStyles.date} dateTime={dateString}>{format(date, 'dd.MM.yyyy')}</time>;
@@ -9,4 +14,5 @@ export default function Date({ dateString }) {
     console.error(err)
     return <p>{dateString}</p>
   }
-}
+};
+export default Date;

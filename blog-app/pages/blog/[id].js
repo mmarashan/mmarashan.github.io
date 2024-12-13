@@ -3,15 +3,15 @@ import OpenGraphMeta from '../../components/openGraphMeta'
 import Head from 'next/head';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
-import { PostsRepository } from '../../data/postsRepository'
+import { PostsRepository } from '../../data/PostsRepository.tsx'
 import { useRouter } from 'next/router'
-import { strings } from '../../public/const';
+import { Strings } from '../../public/Const';
 
 export default function Post({ postData }) {
   const router = useRouter();
   const url = router.url;
   return (
-    <Layout showTitle>
+    <Layout showTitle showFooter>
       <Head>
         <title>{postData.title}</title>
         <OpenGraphMeta
@@ -19,7 +19,7 @@ export default function Post({ postData }) {
           description={postData.title}
           url={url}
           image={postData.poster}
-          siteName={strings.siteTitle}
+          siteName={Strings.siteTitle}
         />
       </Head>
       <article>
