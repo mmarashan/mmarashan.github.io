@@ -1,12 +1,18 @@
 
-export const strings = {
+export const Strings = {
     siteHost: 'marashan.ru',
-    siteTitle: '🚀 Yet another programmer\'s blog',
-    myName: 'Максим Марашан',
-    myDescription: "Программист с опытом работы 9 лет. Запускал продукты в fintech 🧰, voice assistant 🤖, computer vision 🧿, legal 🛡️, funtech 🎬",
-    blogTitle: '📝 Блог',
+    siteTitle: 'Атмосфера Ботаника',
+    siteDescription: 'Блог и база знаний практикующего ботана',
+    aboutOwner: 'Об авторе → 👨🏻‍💻',
+    blogTitle: '🚀 Блог "Атмосфера Ботаника"',
     portfolioTitle: '👨🏻‍💻 Портфолио',
     backToHome: '🏠 На главную',
+}
+
+export class OwnerInfo {
+    public static readonly nameWithSurname: string = 'Максим Марашан'
+    public static readonly about: string =  "Программист с опытом работы 9 лет. Запускал продукты в fintech 🧰, voice assistant 🤖, computer vision 🧿, legal 🛡️, funtech 🎬"
+    public static readonly photoPath: string = "/images/ava.webp"
 }
 
 export const resources = {
