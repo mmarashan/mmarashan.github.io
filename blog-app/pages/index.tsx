@@ -8,7 +8,7 @@ import { PostsRepository } from '../data/PostsRepository'
 
 export default function Home({posts}) {
   return (
-    <Layout showTitle={true} showFooter={true}>
+    <Layout showTitle={true} showFooter={true} showSubitleWithTitle = {false}>
       <Head>
         <title>{Strings.siteTitle}</title>
         <OpenGraphMeta

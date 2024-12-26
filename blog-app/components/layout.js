@@ -1,13 +1,12 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
-import { Strings, resources } from '../public/Const';
-import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
+import { Strings, Resources } from '../public/Const';
 import { Suspense } from "react";
 import { Metrika } from "../components/metrica";
 import SiteFooter from './SiteFooter.tsx';
+import SiteHeader from './SiteHeader.tsx'
 
-export default function Layout({ children, showTitle, showFooter }) {
+export default function Layout({ children, showTitle, showFooter, showSubitleWithTitle }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,19 +16,15 @@ export default function Layout({ children, showTitle, showFooter }) {
           content={Strings.siteTitle}
         />
       </Head>
-      <h1 className={utilStyles.textAlignCenter}>
-        {showTitle && <Link href='/' className={`${utilStyles.siteTitle}`}>{Strings.siteTitle}</Link>}
-        {showTitle && <p className={utilStyles.siteDescription}>{Strings.siteDescription}</p>
-        }
-      </h1>
+      <SiteHeader showTitle={showTitle} showSubitleWithTitle = {showSubitleWithTitle}/>
       <main>
         {children}
         <Suspense>
-          <Metrika id = {resources.metricaId} />
+          <Metrika id = {Resources.metricaId} />
         </Suspense>
       </main>
       <footer>
-        {showFooter && <SiteFooter aaa={"asd"}/>}
+        {showFooter && <SiteFooter/>}
       </footer>
     </div>
   );

@@ -2,7 +2,7 @@
 export const Strings = {
     siteHost: 'marashan.ru',
     siteTitle: 'Атмосфера Ботаника',
-    siteDescription: 'Блог и база знаний практикующего ботана',
+    siteDescription: 'Заметки и база знаний про все, что интересно',
     aboutOwner: 'Об авторе → 👨🏻‍💻',
     blogTitle: '🚀 Блог "Атмосфера Ботаника"',
     portfolioTitle: '👨🏻‍💻 Портфолио',
@@ -15,7 +15,8 @@ export class OwnerInfo {
     public static readonly photoPath: string = "/images/ava.webp"
 }
 
-export const resources = {
+export const Resources = {
+    siteIcon: "/images/nerd-vibe-icon.jpeg",
     metricaId: 98989423,
 }
 
