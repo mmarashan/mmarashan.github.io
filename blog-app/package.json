@@ -5,7 +5,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "deploy": "gh-pages -d build --cname marashan.ru"
+    "deploy": "gh-pages -d build --cname nerd-vibe.ru"
   },
   "dependencies": {
     "@mui/icons-material": "^6.1.6",

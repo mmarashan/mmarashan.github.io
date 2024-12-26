@@ -12,7 +12,7 @@ import ContactsStage from '../components/contactsStage.js'
 
 export default function MyPage() {
   return (
-    <Layout showTitle={false} showFooter={false}>
+    <Layout showTitle={false} showFooter={false} showSubitleWithTitle={false}>
       <Head>
         <title>{OwnerInfo.nameWithSurname}</title>
         <OpenGraphMeta

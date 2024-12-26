@@ -27,8 +27,8 @@
 
 .siteTitle {
   font-size: 2.2rem;
-  line-height: 1.2;
-  margin: 1rem 0;
+  line-height: 1.0;
+  margin: 1rem 0 0.8rem 0;
   font-weight: 800;
   color: black;
 }
