@@ -8,7 +8,7 @@ import Divider from '@mui/material/Divider';
 import Link from 'next/link';
 import Image from 'next/image';
 import Spacer from '../components/spacer.js';
-import ContactsStage from '../components/contactsStage.js'
+import ContactsStage from '../components/ContactsStage'
 
 export default function MyPage() {
   return (

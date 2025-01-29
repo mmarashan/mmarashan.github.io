@@ -20,7 +20,7 @@ export const Resources = {
     metricaId: 98989423,
 }
 
-export const MyContacts = [
+export const MyContacts: Contact[] = [
     {
         title: "E-mail",
         icon: "/images/yandex_mail_icon.svg",
@@ -46,4 +46,12 @@ export const MyContacts = [
         icon: "/images/linkedin-icon.svg",
         url: 'https://www.linkedin.com/in/marashan/'
     }
+]
+
+export const SiteContacts: Contact[] = [
+    {
+        title: "Telegram-канал 'Атмосфера Ботаника'",
+        icon: "/images/telegram_icon.svg",
+        url: "https://t.me/nerd_vibe"
+    },
 ]

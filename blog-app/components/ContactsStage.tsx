@@ -2,7 +2,11 @@ import utilStyles from '../styles/utils.module.css';
 import styles from './layout.module.css';
 import IconButton from './iconButton.js'
 
-export default function ContactsStage({ contacts }) {
+interface ContactsStageProps {
+    contacts: Contact[]
+}
+
+export default function ContactsStage({ contacts }: ContactsStageProps) {
     return (
     <div className={styles.horizontalContainer}>
         {

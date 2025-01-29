@@ -12,7 +12,7 @@ function IconButton({ icon, onClick, backgroundColor, alt }) {
     function handleMouseMove(e) {
       setCursorPosition({
         x: e.clientX,
-        y: e.clientY,
+        y: e.clientY + window.scrollY,
       });
     }
 
