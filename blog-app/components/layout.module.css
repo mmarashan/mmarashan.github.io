@@ -42,13 +42,13 @@
 
 .showcaseCardImage {
   width: 256px;
-  height: auto;
-  max-height: 196px;
+  height: 196px;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 .showcaseCardData {
-  padding: 10px;
+  padding: 0px 0px 0px 32px;
 }
 
 /* Изменение стилей под мобильную верстку */
@@ -67,6 +67,7 @@
   .showcaseCardData {
     text-align: center;
     border-radius: 0 0 5px 5px;
+    padding: 8px 0px 0px 0px;
   }
 
   .showcaseCardTags {
