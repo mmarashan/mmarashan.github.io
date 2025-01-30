@@ -15,7 +15,7 @@ const SiteHeader: FC = (props: SiteHeaderProps) => {
     return (
         <h1>
             {props.showTitle && 
-            <div className={`${utilStyles.textAlignCenter}`}>
+            <div>
                 <div className={styles.horizontalContainer}>
                     <Image
                         priority

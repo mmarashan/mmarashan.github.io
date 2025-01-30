@@ -26,10 +26,10 @@
 }
 
 .siteTitle {
-  font-size: 2.2rem;
+  font-size: 2.0rem;
   line-height: 1.0;
   margin: 1rem 0 0.8rem 0;
-  font-weight: 800;
+  font-weight: 700;
   color: black;
 }
 
@@ -70,6 +70,11 @@
 .paddingHorizontal8px {
   padding-right: 8px;
   padding-left: 8px;
+}
+
+.paddingHorizontal16px {
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 .list {

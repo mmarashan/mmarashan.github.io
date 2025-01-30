@@ -54,4 +54,9 @@ export const SiteContacts: Contact[] = [
         icon: "/images/telegram_icon.svg",
         url: "https://t.me/nerd_vibe"
     },
+    {
+        title: "Об авторе",
+        icon: "/images/programmer_icon.png",
+        url: "/owner"
+    },
 ]

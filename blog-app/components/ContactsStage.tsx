@@ -11,7 +11,7 @@ export default function ContactsStage({ contacts }: ContactsStageProps) {
     <div className={styles.horizontalContainer}>
         {
             contacts.map((contact) => (
-                <div key={contact.title} className={utilStyles.paddingHorizontal8px}>
+                <div key={contact.title} className={utilStyles.paddingHorizontal16px}>
                 <IconButton
                     icon={contact.icon}
                     backgroundColor="transparent"
