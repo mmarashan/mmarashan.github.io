@@ -81,10 +81,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .listItem {
-  margin: 0 0 1.25rem;
+  margin: 0;
   display: block;
 }
 
@@ -96,4 +99,13 @@
   font-size: 1.0rem;
   line-height: 1.5;
   color: #666666;
+}
+@media (max-width: 768px) {
+  .list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .listItem {
+    margin: 0;
+  }
 }

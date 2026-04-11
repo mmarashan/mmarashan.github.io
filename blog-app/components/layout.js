@@ -6,9 +6,9 @@ import { Metrika } from "../components/metrica";
 import SiteFooter from './SiteFooter.tsx';
 import SiteHeader from './SiteHeader.tsx'
 
-export default function Layout({ children, showTitle, showFooter, showSubitleWithTitle }) {
+export default function Layout({ children, showTitle, showFooter, showSubitleWithTitle, containerClass = styles.container }) {
   return (
-    <div className={styles.container}>
+    <div className={containerClass}>
       <Head>
         <link rel="icon" href="/favicon.svg" />
         <meta

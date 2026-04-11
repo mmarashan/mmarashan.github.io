@@ -48,15 +48,4 @@ export const MyContacts: Contact[] = [
     }
 ]
 
-export const SiteContacts: Contact[] = [
-    {
-        title: "Telegram-канал 'Атмосфера Ботаника'",
-        icon: "/images/telegram_icon.svg",
-        url: "https://t.me/nerd_vibe"
-    },
-    {
-        title: "Об авторе",
-        icon: "/images/programmer_icon.png",
-        url: "/owner"
-    },
-]
+export const SiteContacts: Contact[] = []

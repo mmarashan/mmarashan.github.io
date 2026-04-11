@@ -23,30 +23,34 @@ export default function MyPage() {
           siteName={Strings.siteTitle}
         />
       </Head>
-      <Spacer axis="vertical" size={32} />
-      <header className={styles.header}>
-        <Image
-          priority
-          src={OwnerInfo.photoPath}
-          className={utilStyles.borderCircle}
-          height={144}
-          width={144}
-          alt={OwnerInfo.nameWithSurname}
-        />
-        <h1 className={utilStyles.heading2Xl}>{OwnerInfo.nameWithSurname}</h1>
-      </header>
-      <section>
-        <p className={`${utilStyles.myDescription} ${utilStyles.textAlignCenter}`}>
-          {OwnerInfo.about}
-        </p>
-        <ContactsStage contacts={MyContacts}/> 
-      </section>
-      <Spacer axis="vertical" size={16} />
-      <Divider aria-hidden="true" />
-      <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
-        <p><Link href='/'>{Strings.blogTitle}</Link></p>
-        <p><Link href='/owner/portfolio'>{Strings.portfolioTitle}</Link></p>
-      </section>
+      <div className={styles.contentNarrow}>
+        <Spacer axis="vertical" size={32} />
+        <header className={styles.header}>
+          <Image
+            priority
+            src={OwnerInfo.photoPath}
+            className={utilStyles.borderCircle}
+            height={250}
+            width={250}
+            alt={OwnerInfo.nameWithSurname}
+          />
+           <Spacer axis="horizontal" size={32} />
+          <div className={styles.headerRight}>
+            <h1 className={utilStyles.heading2Xl}>{OwnerInfo.nameWithSurname}</h1>
+            <p className={utilStyles.myDescription}>
+              {OwnerInfo.about}
+            </p>
+          </div>
+        </header>
+        <section>
+          <ContactsStage contacts={MyContacts}/>
+        </section>
+        <Spacer axis="vertical" size={16} />
+        <Divider aria-hidden="true" />
+        <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
+          <p><Link href='/owner/portfolio'>{Strings.portfolioTitle}</Link></p>
+        </section>
+      </div>
     </Layout>
   );
 }
