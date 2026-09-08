@@ -11,7 +11,7 @@ export const Strings = {
 
 export class OwnerInfo {
     public static readonly nameWithSurname: string = 'Максим Марашан'
-    public static readonly about: string =  "Меня зовут Максим Марашан. Я программист с опытом работы 9 лет. Запускал продукты в fintech 🧰, voice assistant 🤖, computer vision 🧿, legal 🛡️, funtech 🎬"
+    public static readonly about: string =  "Меня зовут Максим Марашан. Я программист с опытом работы 10 лет. Запускал продукты в fintech 🧰, voice assistant 🤖, computer vision 🧿, AI 💡, legal 🛡️, funtech 🎬"
     public static readonly photoPath: string = "/images/ava.webp"
 }
 
